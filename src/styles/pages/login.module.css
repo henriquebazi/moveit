@@ -1,0 +1,141 @@
+.container {
+  background: var(--blue);
+  width: 100vw;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  height: 100vh;
+}
+.logo > img {
+  height: 90vh;
+}
+
+.inputSide {
+  flex: 1;
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 3rem;
+  margin-right: 1rem; 
+
+  color: var(--text-highlight);
+}
+
+.inputSide img {
+  width: 360px;
+  height: 76px;
+  margin-bottom: 94px;
+}
+
+.info p {
+  margin-top: 24px;
+  width: 240px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.info p img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px 0 0;
+}
+
+.info .input {
+  display: flex;
+  margin-top: 40px;
+}
+
+.info input{
+  width: 360px;
+  height: 80px;
+
+  background-image: linear-gradient(to right, var(--blue-dark), var(--blue));
+
+  border-radius: 0.5rem;
+  border:none; 
+
+  text-align:center;
+  color: var(--text-highlight);
+}
+
+.info input::placeholder {
+  color: var(--text-highlight);
+}
+
+.info button{
+  width: 80px;
+  height: 80px;
+
+  background: var(--blue-dark);
+  border-radius: 0.5rem;
+  border:none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor:default;
+}
+
+.info button:enabled{
+  background: var(--green);
+
+  cursor:pointer;
+}
+
+.info button img {
+  width: 24px;
+  height: 24px;
+
+  margin: 0;
+  padding: 0;
+}
+
+@media(max-width:1024px) {
+  .inputSide img {
+    width: 280px;
+    height: 59px;
+    margin-bottom: 65px;
+  }
+
+  .info input {
+    width: 280px;
+    height: 59px;
+  }
+
+  .info button {
+    width: 59px;
+    height: 59px;
+  }
+}
+
+@media(max-width:850px) {
+  .container {
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo img{
+    display: none;
+    z-index: -50;
+  }
+
+  .inputSide {
+    margin-top: 35px;
+    position: absolute;
+    z-index: 50;
+  }
+}
